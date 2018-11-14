@@ -7,25 +7,25 @@ public class RoadCamera
     public static void main(String[] args) throws IOException
     {
         //Параметры программы
-        Integer maxOncomingSpeed = 40; // km/h
-        Integer speedFineGrade = 20; // km/h
-        Integer finePerGrade = 500; // RUB
-        Integer criminalSpeed = 180; // km/h
+        int maxOncomingSpeed = 40; // km/h
+        int speedFineGrade = 20; // km/h
+        int finePerGrade = 500; // RUB
+        int criminalSpeed = 180; // km/h
 
         //=============================================================
         System.out.println("Введите скорость автомобиля:");
 
          //Скорость автомобиля
-        Integer oncomingSpeed = Integer.parseInt((new BufferedReader(new InputStreamReader(System.in))).readLine());
+        int oncomingSpeed = Integer.parseInt((new BufferedReader(new InputStreamReader(System.in))).readLine());
         if(oncomingSpeed >= criminalSpeed)
         {
             System.out.println("Вызов полиции...");
         }
         else if(oncomingSpeed > maxOncomingSpeed)
         {
-            Integer overSpeed = oncomingSpeed - maxOncomingSpeed;
-            Integer gradesCount = overSpeed / speedFineGrade;
-            Integer fine = finePerGrade * gradesCount * 2;
+            int overSpeed = oncomingSpeed - maxOncomingSpeed;
+            int gradesCount = overSpeed / speedFineGrade;
+            int fine = finePerGrade * gradesCount * 2;
             System.out.println("Сумма штрафа: " + fine);
         }
         else {
